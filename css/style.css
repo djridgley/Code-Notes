@@ -32,6 +32,9 @@ body {
   grid-template-rows: repeat(2, 1fr); }
   .categories .item {
     border: 1rem solid #06e418; }
+    .categories .item svg {
+      height: 5rem;
+      fill: aqua; }
 
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../img/notes-hero.jpg);

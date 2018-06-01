@@ -11,5 +11,10 @@
 
   & .item {
     border: 1rem solid rgb(6, 228, 24);
+
+    & svg {
+      height: 5rem;
+      fill: aqua;
+    }
   }
 }
