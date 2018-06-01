@@ -21,3 +21,24 @@ html {
 body {
   background-color: black;
   color: white; }
+
+.header {
+  border: 1px solid red;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../img/notes-hero.jpg);
+  object-fit: cover;
+  grid-column: 1/6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .header__heading {
+    border: 1px solid red;
+    text-align: center;
+    margin-top: 12rem; }
+    .header__heading h1 {
+      font-size: 4rem; }
+
+.main-container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 40vh max-content;
+  grid-template-columns: repeat(5, 1fr); }
