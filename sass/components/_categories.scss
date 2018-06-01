@@ -12,9 +12,20 @@
   & .item {
     border: 1rem solid rgb(6, 228, 24);
 
+    display: grid;
+    grid-template-rows: 1fr, 1fr, 2fr;
+
+
     & svg {
-      height: 5rem;
+      height: 7rem;
+      padding-top: 1rem;
       fill: aqua;
+
+      grid-row: 1/2;
+    }
+
+    & h2 {      
+      justify-self: center;
     }
   }
 }

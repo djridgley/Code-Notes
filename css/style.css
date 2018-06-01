@@ -31,10 +31,16 @@ body {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr); }
   .categories .item {
-    border: 1rem solid #06e418; }
+    border: 1rem solid #06e418;
+    display: grid;
+    grid-template-rows: 1fr, 1fr, 2fr; }
     .categories .item svg {
-      height: 5rem;
-      fill: aqua; }
+      height: 7rem;
+      padding-top: 1rem;
+      fill: aqua;
+      grid-row: 1/2; }
+    .categories .item h2 {
+      justify-self: center; }
 
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../img/notes-hero.jpg);
