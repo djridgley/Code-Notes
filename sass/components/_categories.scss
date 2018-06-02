@@ -13,19 +13,24 @@
     border: 1rem solid rgb(6, 228, 24);
 
     display: grid;
-    grid-template-rows: 1fr, 1fr, 2fr;
-
+    grid-template-rows: 1fr 1fr 2fr;
 
     & svg {
       height: 7rem;
       padding-top: 1rem;
-      fill: aqua;
+      fill: $color-text-secondary;
 
       grid-row: 1/2;
     }
 
     & h2 {      
+      font-size: 3rem;
       justify-self: center;
+    }
+
+    & p {
+      font-size: 1.5rem;
+      text-align: center;
     }
   }
 }
