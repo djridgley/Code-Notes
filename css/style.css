@@ -34,6 +34,8 @@ body {
     border: 1rem solid #06e418;
     display: grid;
     grid-template-rows: 1fr 1fr 2fr; }
+    .categories .item:hover {
+      background-color: #051e27; }
     .categories .item svg {
       height: 7rem;
       padding-top: 1rem;
@@ -41,10 +43,12 @@ body {
       grid-row: 1/2; }
     .categories .item h2 {
       font-size: 3rem;
+      align-self: end;
       justify-self: center; }
     .categories .item p {
       font-size: 1.5rem;
-      text-align: center; }
+      text-align: center;
+      align-self: center; }
 
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../img/notes-hero.jpg);

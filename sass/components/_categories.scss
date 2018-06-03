@@ -15,6 +15,10 @@
     display: grid;
     grid-template-rows: 1fr 1fr 2fr;
 
+    &:hover {
+      background-color: rgb(5, 30, 39);
+    }
+
     & svg {
       height: 7rem;
       padding-top: 1rem;
@@ -25,12 +29,15 @@
 
     & h2 {      
       font-size: 3rem;
+      align-self: end;
       justify-self: center;
     }
 
     & p {
       font-size: 1.5rem;
       text-align: center;
+
+      align-self: center;
     }
   }
 }
