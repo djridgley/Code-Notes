@@ -41,3 +41,51 @@
     }
   }
 }
+
+
+
+
+
+
+
+.flexbox-testing {
+  margin-top: 5rem;
+  margin-bottom: 20rem;
+  font-size: 15rem;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  & .item {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20rem;
+
+    flex-basis: 12.5%
+  }
+
+  & .item1 {
+    background-color: red;
+  }
+  & .item2 {
+    background-color: orange;
+  }
+  & .item3 {
+    background-color: blue;
+  }
+  & .item4 {
+    background-color: green;
+  }
+  & .item5 {
+    background-color: pink;
+  }
+  & .item6 {
+    background-color: purple;
+  }
+  & .item7 {
+    background-color: darkcyan;
+  }
+  & .item8 {
+    background-color: darkkhaki;
+  }
+}

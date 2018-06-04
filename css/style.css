@@ -50,6 +50,34 @@ body {
       text-align: center;
       align-self: center; }
 
+.flexbox-testing {
+  margin-top: 5rem;
+  margin-bottom: 20rem;
+  font-size: 15rem;
+  display: flex;
+  flex-wrap: wrap; }
+  .flexbox-testing .item {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20rem;
+    flex-basis: 12.5%; }
+  .flexbox-testing .item1 {
+    background-color: red; }
+  .flexbox-testing .item2 {
+    background-color: orange; }
+  .flexbox-testing .item3 {
+    background-color: blue; }
+  .flexbox-testing .item4 {
+    background-color: green; }
+  .flexbox-testing .item5 {
+    background-color: pink; }
+  .flexbox-testing .item6 {
+    background-color: purple; }
+  .flexbox-testing .item7 {
+    background-color: darkcyan; }
+  .flexbox-testing .item8 {
+    background-color: darkkhaki; }
+
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../img/notes-hero.jpg);
   object-fit: cover;
@@ -65,7 +93,7 @@ body {
       height: 6rem; }
 
 .main-container {
-  height: 100vh;
+  height: auto;
   display: grid;
   grid-template-rows: 60vh max-content;
   grid-template-columns: repeat(5, 1fr); }

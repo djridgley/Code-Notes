@@ -7,6 +7,8 @@
   <title>Code Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/png" href="img/notes.png" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" media="screen" href="css/style.css" />
 
@@ -24,7 +26,7 @@
 
     <div class="categories">
 
-      <div class="item item-1 wow animated fadeIn" data-wow-offset="20">
+      <div class="item item-1 wow animated fadeIn" data-wow-offset="20" data-toggle="modal" data-target="#hobbiesModal">
         <svg>
           <use href="img/sprite.svg#si-simple-coderwall" />
         </svg>
@@ -104,10 +106,157 @@
         <p>AKA Sassy CSS, is a library that allows for a lot of user experience enhancements to CSS.</p>
       </div>
     </div>
+  </div>
 
+  <!-- Uncomment for Flexbox testing -->
+  <!-- <div class="flexbox-testing">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+    <div class="item item7">7</div>
+    <div class="item item8">8</div>
+  </div> -->
+
+
+
+
+  <!-- M O D A L S                     M O D A L S                     M O D A L S -->
+
+  <div class="modal fade" id="hobbiesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Flexbox</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <h2>Container</h2>
+          <ul>
+            <li>You set display: flex in the parent container to affect all children</li>
+            <li>There is also inline-flex, but it's not used often. It just makes the flex container an inline element</li>
+            <li>The main axis is the way your flex box direction is flowing, either row or column</li>
+            <li>The cross axis is the opposite of the main</li>
+          </ul>
+
+          <h2>Flex Direction</h2>
+          <ul>
+            <li>The flex-direction defaults to row. There are also other choices: row-reverse, column and column-reverse</li>
+            <li>row-reverse just places the elements starting from the right side instead of the left</li>
+            <li>column is up and down and column-reverse is down to up</li>
+          </ul>
+
+          <h2>Flex Wrap</h2>
+          <ul>
+            <li>it defaults to nowrap, meaning items will not wrap to new lines based on viewport</li>
+            <li>this can cause items to get cut out completely as the viewport changes</li>
+            <li>setting to wrap makes items wrap to the next line of the main axis</li>
+            <li>wrap-reverse makes items do the same thing, just items from the other side of the container wrap first</li>
+          </ul>
+
+          <h2>Justify Content</h2>
+          <ul>
+            <li>justify-content determines how the objects inside the flexbox are displayed</li>
+            <li>the default is flex-start, but there are others: flex-end, center, space-between, space-around and space-evenly</li>
+            <li>flex-end pushes them to end the of the main axis which varies depending on your flex-direction</li>
+            <li>center centers items in the middle of the flexbox, so even space on all sides, but no spacing between items</li>
+            <li>space-between uses the entire container's space and gives each item equal spacing within the container</li>
+            <li>space-around gives items equal spacing on both sides of the element along the main axis</li>
+            <li>space-evenly gives items equal spacing along the main axis, taking into account space on the end</li>
+          </ul>
+
+          <h2>Align Items</h2>
+          <ul>
+            <li>align items determines how the items are aligned on the cross axis</li>
+            <li>align items defaults to stretch, so it will stretch all other items to match the largest</li>
+            <li>there is also flex-start, flex-end, center, and baseline</li>
+            <li>flex-start will align all items at the beginning of the cross axis</li>
+            <li>flex-end will align all items at the end of the cross axis</li>
+            <li>center will center all items on the cross axis relative to the largest element</li>
+            <li>baseline will align the content inside each element along the main axis</li>
+          </ul>
+
+          <h2>Align Content</h2>
+          <ul>
+            <li>keep in mind this property is used when you have multiple columns or rows on the cross axis</li>
+            <li>it's a way to manage the extra whitespace inside a parent container when there are multiple rows/columns</li>
+            <li>align content defaults to stretch, acts similar to space-between in execution</li>
+            <li>there is also flex-start, flex-end, center, space-between and space-around</li>
+            <li>flex-start has all content move to the top of the parent container, and all white space goes to the end</li>
+            <li>flex-end will push all content to the end, and have all extra white space to the start</li>
+          </ul>
+
+          <h2>Align Self</h2>
+          <ul>
+            <li>this property is used on the individual flex item</li>
+            <li>it aligns item to a different spot than all the others. ex. one item being flex-end while the rest are center</li>
+            <li>auto is the default, but there is stretch, flex-start, flex-end, center, and baseline</li>
+            <li>flex-start and flex-end align the item to either the start or end of the cross axis</li>
+            <li>stretch will stretch the item to make it take up the same space as the largest element</li>
+            <li>center will center along the cross axis</li>
+            <li>baseline will align the content of the item with the other item's content along the main axis</li>
+          </ul>
+
+          <h2>Order</h2>
+          <ul>
+            <li>order can be used to change an item's order inside the flexbox container</li>
+            <li>each item has a default position of 0 and it just lists them in the order they exist in the html</li>
+            <li>so giving an item -1 will put it at the start, and 1 will put it at the end</li>
+            <li>these numbers can go up or down if you want to move multiple items</li>
+          </ul>
+
+          <h2>Flex-Grow</h2>
+          <ul>
+            <li>flex grow will make an item grow to take up as much as it can along the main axis</li>
+            <li>all flex items default to 0</li>
+            <li>setting a single item to 1 will make it grow to take up all remaining space it can</li>
+            <li>it's relative, so it you have an item at 1, and another at 2, 2 will take up 2x the space available</li>
+            <li>items will not wrap due to flex-grow, they will only take up available space on their main axis</li>
+          </ul>
+
+          <h2>Flex-Shrink</h2>
+          <ul>
+            <li>determines if an item is allowed to shrink or not</li>
+            <li>each items defaults to 1 meaning yes it is allowed</li>
+            <li>if you set it to 0, the item will not shrink as the viewport shrinks</li>
+          </ul>
+
+          <h2>Flex-Basis</h2>
+          <ul>
+            <li>determines how much of the container to take up</li>
+            <li>each item start at auto, but you can set it to for example 20% on an item</li>
+            <li>this will make that item take up 20% of the space it can</li>
+            <li>flex-basis will cause items to wrap if you have items that total over 100%</li>
+          </ul>
+
+          <h2>Flex</h2>
+          <ul>
+            <li>is a shorthand for flex-grow, flex-shrink and flex-basis</li>
+            <li>you can use flex: 0 1 auto; for example to define all 3 in one line in that order</li>
+          </ul>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
 
 
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
 
   <script src="js/wow.min.js"></script>
 </body>
