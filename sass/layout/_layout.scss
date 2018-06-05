@@ -5,3 +5,34 @@
   grid-template-rows: 60vh max-content;
   grid-template-columns: repeat(5, 1fr);
 }
+
+
+.modal {
+  color: $color-text-primary;
+
+  .modal-title {
+    font-size: 4rem;
+    padding-left: 10%;
+  }
+  
+  .modal-body {
+    padding: 0 5% 0 5%;
+  }
+  
+  .modal-body ul {
+      list-style: square;
+      font-family: hind, sans-serif;
+      font-size: 1.2rem;
+      padding: 1rem 0;
+      padding-left: 3%;
+  }
+  
+  .modal-body p {
+      font-family: hind, sans-serif;
+      font-size: 1.2rem;
+  }
+  
+  .modal-body ul.career {
+      list-style: none;
+    }
+}

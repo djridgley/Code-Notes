@@ -7,10 +7,10 @@
   <title>Code Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/png" href="img/notes.png" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="css/animate.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+  crossorigin="anonymous">
   <link rel="stylesheet" media="screen" href="css/style.css" />
+  <link rel="stylesheet" href="css/animate.css">
 
 </head>
 
@@ -26,7 +26,7 @@
 
     <div class="categories">
 
-      <div class="item item-1 wow animated fadeIn" data-wow-offset="20" data-toggle="modal" data-target="#hobbiesModal">
+      <div class="item item-1 wow animated fadeIn" data-toggle="modal" data-target="#flexbox-modal">
         <svg>
           <use href="img/sprite.svg#si-simple-coderwall" />
         </svg>
@@ -34,7 +34,7 @@
         <p>Flexbox is a display mode in CSS3 to allow for positioning of elements.</p>
       </div>
 
-      <div class="item item-2 wow animated fadeIn data-wow-offset=" 20 " ">
+      <div class="item item-2 wow animated fadeIn" data-toggle="modal" data-target="#css-grid-modal">
         <svg>
           <use href="img/sprite.svg#si-simple-ghost" />
         </svg>
@@ -42,7 +42,7 @@
         <p>CSS Grid is a display mode in CSS3 to allow for advanced 2D positioning of elements.</p>
       </div>
 
-      <div class="item item-3 wow animated fadeIn data-wow-offset=" 20 " ">
+      <div class="item item-3 wow animated fadeIn">
         <svg>
           <use href="img/sprite.svg#si-dev-css3" />
         </svg>
@@ -50,7 +50,7 @@
         <p>CSS or Cascading Style Sheets is the markup language used for styling the Internet.</p>
       </div>
 
-      <div class="item item-4 wow animated fadeIn data-wow-offset=" 20 " ">
+      <div class="item item-4 wow animated fadeIn">
         <svg>
           <use href="img/sprite.svg#si-dev-html5" />
         </svg>
@@ -58,7 +58,7 @@
         <p>HTML of Hypertext Markup Language is used to build the skeleton of a web page or app.</p>
       </div>
 
-      <div class="item item-5 wow animated fadeIn data-wow-offset=" 20 " ">
+      <div class="item item-5 wow animated fadeIn">
         <svg>
           <use href="img/sprite.svg#si-dev-javascript_1" />
         </svg>
@@ -66,7 +66,7 @@
         <p>JavaScript is the most popular programming language around. It's used for the front end and the back end both.</p>
       </div>
 
-      <div class="item item-6 wow animated fadeIn data-wow-offset=" 20 " ">
+      <div class="item item-6 wow animated fadeIn" data-wow-offset="50">
         <svg>
           <use href="img/sprite.svg#si-dev-github_full" />
         </svg>
@@ -74,7 +74,7 @@
         <p>Github is used for source control and code management. It's also a great way to manage versioning</p>
       </div>
 
-      <div class="item item-7 wow animated fadeIn data-wow-offset=" 20 " ">
+      <div class="item item-7 wow animated fadeIn" data-wow-offset="50">
         <svg>
           <use href="img/sprite.svg#si-dev-react" />
         </svg>
@@ -82,7 +82,7 @@
         <p>A JavaScript library for creating user interfaces. Redux is a state management library</p>
       </div>
 
-      <div class="item item-8 wow animated fadeIn data-wow-offset=" 20 " ">
+      <div class="item item-8 wow animated fadeIn" data-wow-offset="50">
         <svg>
           <use href="img/sprite.svg#si-simple-vuejs" />
         </svg>
@@ -90,7 +90,7 @@
         <p>A JavaScript library that is sort of a combination between Angular and React.</p>
       </div>
 
-      <div class="item item-9 wow animated fadeIn data-wow-offset=" 20 " ">
+      <div class="item item-9 wow animated fadeIn" data-wow-offset="50">
         <svg>
           <use href="img/sprite.svg#si-dev-backbone" />
         </svg>
@@ -98,7 +98,7 @@
         <p>An older JavaScript Library that uses models and views.</p>
       </div>
 
-      <div class="item item-10 wow animated fadeIn data-wow-offset=" 20 " ">
+      <div class="item item-10 wow animated fadeIn" data-wow-offset="50">
         <svg>
           <use href="img/sprite.svg#si-dev-sass" />
         </svg>
@@ -110,14 +110,14 @@
 
   <!-- Uncomment for Flexbox testing -->
   <!-- <div class="flexbox-testing">
-    <div class="item item1">1</div>
-    <div class="item item2">2</div>
-    <div class="item item3">3</div>
-    <div class="item item4">4</div>
-    <div class="item item5">5</div>
-    <div class="item item6">6</div>
-    <div class="item item7">7</div>
-    <div class="item item8">8</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+    <div class="flex-item item4">4</div>
+    <div class="flex-item item5">5</div>
+    <div class="flex-item item6">6</div>
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item7">7</div>
+    <div class="flex-item item8">8</div>
   </div> -->
 
 
@@ -125,7 +125,7 @@
 
   <!-- M O D A L S                     M O D A L S                     M O D A L S -->
 
-  <div class="modal fade" id="hobbiesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="flexbox-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -231,7 +231,7 @@
             <li>determines how much of the container to take up</li>
             <li>each item start at auto, but you can set it to for example 20% on an item</li>
             <li>this will make that item take up 20% of the space it can</li>
-            <li>flex-basis will cause items to wrap if you have items that total over 100%</li>
+            <li>If flex-wrap is turned on, flex-basis can cause items to wrap</li>
           </ul>
 
           <h2>Flex</h2>
@@ -249,16 +249,38 @@
   </div>
 
 
+  <!-- <div class="modal fade" id="css-grid-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">CSS Grid</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
 
 
 
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
 
+
   <script src="js/wow.min.js"></script>
+  <script>new WOW().init();</script>
 </body>
 
 </html>

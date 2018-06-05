@@ -1,21 +1,21 @@
 .header {
   background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(../../img/notes-hero.jpg);
-  object-fit: cover;
+  background-size: cover;
 
   grid-row: 1/2;
   grid-column: 1/6;
-  align-content: center;
+  
 
   &__heading {
+    height: 100%;
     text-align: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     & h1 {
       font-size: 4rem;
-    }
-
-    & .icon {
-      fill: white;
-      height: 6rem;
     }
   }
 }
