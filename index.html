@@ -120,7 +120,7 @@
     <div class="flex-item f-item8">8</div>
   </div> -->
 
-  <!-- <div class="grid-testing">
+  <div class="grid-testing">
     <div class="grid-item g-item1">1</div>
     <div class="grid-item g-item2">2</div>
     <div class="grid-item g-item3">3</div>
@@ -137,7 +137,7 @@
     <div class="grid-item g-item14">14</div>
     <div class="grid-item g-item15">15</div>
     <div class="grid-item g-item16">16</div>
-  </div> -->
+  </div>
 
 
 
@@ -282,14 +282,16 @@
           <ul>
             <li>The rows property is used to provide the height is each grid row  :: grid-template-rows: repeat(2, 150px);</li>
             <li>The columns property is used to provide the width of each column ::   grid-template-columns: repeat(3, 1fr);</li>
-            <li>The areas property is for naming the diffent sections of the grid you declared :: grid-template-areas: "green brown blue" "violet orange pink";</li>
+            <li>Areas is for naming sections declated grid :: grid-template-areas: "green brown blue" "violet orange pink";</li>
+            <li>The above would name the 3 grid cells on row 1, then name the 3 on row 2</li>
           </ul>
-
+          
           <h2>FR</h2>
           <ul>
-          <li>fr stands for fractional unit, and it can be used to divide up the entirety of the available grid area</li>
-          <li>If you were to give 3columns each 1fr, you would have 3 even colunm widths</li>
-          <li>If you gave 2 olumns each 1fr and the 3rd column 2fr, the 3rd column would be 2x the width of the others</li>
+            <li>fr stands for fractional unit, and it can be used to divide up the entirety of the available grid area</li>
+            <li>If you were to give 3 columns each 1fr, you would have 3 even colunm widths inside their parent</li>
+            <li>If you gave 2 columns each 1fr and the 3rd column 2fr, the 3rd column would be 2x the width of the others</li>
+            <li>So the size of 1fr is relative to the parent container and how many fr other grid items are given</li>
           </ul>
 
           <h2>Naming Grid Rows/Columns</h2>
@@ -297,57 +299,57 @@
             <li>You can name rows/columns when you declade them for example...</li>
             <li>grid-template-rows: [header-begin] 1fr [header-end] 1fr</li>
             <li>Would create 2rows, with the 1st named header-begin and the 2nd header-end</li>
+            <li>This will name the grid lines to make for more semantic usage later on</li>
+            <li>If your grid will need to be responsive you'd need to redefine names in a media query</li>
           </ul>
 
           <h2>Auto Fill/Fit</h2>
           <ul>
             <li>auto-fill can be used to fill out remaining grid space if needed creating new rows/columns implicitly</li>
             <li>auto-fit will instead collapse implicitly created grid spaces if they are empty</li>
-            <li>so for example :: grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))  if used in a 1000px wide container</li>
+            <li>ex. :: grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))  if used in a 1000px wide container</li>
             <li>elements would fill the entire space, being 1fr max width, and 100px min width</li>
           </ul>
 
           <h2>Grid Row/Column Gap</h2>
           <ul>
             <li>This property is used to define the size of the gap or gutter between each row or column respectively</li>
-            <li>Using grid-gap: 20px 40px is a shorthand way to set both. It sets row then column. Using a single value applies to both</li>
+            <li>Using grid-gap: 20px 40px is a shorthand way to set both. It sets row then column</li>
+            <li>A single value applies to both so grid-gap: 20px would set both to 20px</li>
+            <li>Gap can be set individually using grid-row-gap and grid-column-gap respectively</li>
           </ul>
 
-          <h2>Grid Row/Column Start</h2>
+          <h2>Grid Row/Column Start/End</h2>
           <ul>
-            <li>This property determines where a grid item start based off grid lines</li>
-            <li>so if it starts at row2 then that is the row it will be placed in</li>
-            <li>if the item starts at column3 then it will be so.</li>
-            <li>so this example item would be in the 2nd row in the 3rd column</li>
-          </ul>
-
-          <h2>Grid Row/Column End</h2>
-          <ul>
-            <li>This property determines where a grid item will end based off grid lines</li>
-            <li>so if an item starts at row2 column3 you could set it to end by row3 column5 for example</li>
-            <li>this would make the item extend one row, but 2columns</li>
+            <li>This property determines where a grid item starts based off grid lines</li>
+            <li>If it starts at row 2 then that is the row it will be placed in</li>
+            <li>If the item starts at column 3 then it will be so</li>
+            <li>In this example the item would be in the 2nd row in the 3rd column</li>
+            <li>This can be set on grid items using grid-row: and grid-column: respectively</li>
+            <li>If an item needs to span multiple rows or columns you can do grid-row: 2/7 for example</li>
+            <li>That would start the item at grid row 2 and end ad the end of grid row 6</li>
+            <li>To make an item just extend to the very end of the grid you can use -1 as the end point</li>
           </ul>
 
           <h2>Grid Auto Rows/Columns/Flow</h2>
           <ul>
             <li>This property is used to size implicit grid elements</li>
-            <li>ie elements you didn't define in the template, but exist in your html and ad implicitly added</li>
-            <li>flow is how extra elements are implicitly added, it's set to row by default</li>
-            <li>if you set it to column then all implicitly added elements will add new columns instead of rows</li>
-            <li>the flow setting will also change how items are ordered if you do not set them explicitly</li>
-            <li>by default items in your html inside the grid will appear in order from left to right or row, then move down</li>
-            <li>to the next row after the first is full</li>
-            <li>if flow is set to column it will move top to bottom then to the next column instead</li>
+            <li>ie elements not defined in the template, but exist in your html and are implicitly added due to size</li>
+            <li>Flow is how extra elements are implicitly added, it's set to row by default</li>
+            <li>If you set it to column then all implicitly added elements will add new columns instead of rows</li>
+            <li>The flow setting will also change how items are ordered if you do not set them explicitly</li>
+            <li>By default items in your html will fill the grid in the same order as they exist in the html</li>
+            <li>If flow is set to column it will move top to bottom then to the next column</li>
           </ul>
 
           <h2>Align Items and Justify Items</h2>
           <ul>
             <li>align-items aligns grid elements along the column axis</li>
-            <li>the default is stretch, but there is also start, end, and center</li>
-            <li>justify-items alingns grid elements along the row axis</li>
+            <li>The default is stretch, but there is also start, end, and center</li>
+            <li>justify-items aligns grid elements along the row axis</li>
             <li>the default is stretch, but there is also start, end, and center</li>
             <li>you can also use justify-self and align-self to position a single item</li>
-          </ul>          
+          </ul>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
