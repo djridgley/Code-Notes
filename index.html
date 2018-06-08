@@ -42,7 +42,7 @@
         <p>CSS Grid is a display mode in CSS3 to allow for advanced 2D positioning of elements.</p>
       </div>
 
-      <div class="item item-3 wow animated fadeIn">
+      <div class="item item-3 wow animated fadeIn" data-toggle="modal" data-target="#css-modal">
         <svg>
           <use href="img/sprite.svg#si-dev-css3" />
         </svg>
@@ -120,7 +120,7 @@
     <div class="flex-item f-item8">8</div>
   </div> -->
 
-  <div class="grid-testing">
+  <!-- <div class="grid-testing">
     <div class="grid-item g-item1">1</div>
     <div class="grid-item g-item2">2</div>
     <div class="grid-item g-item3">3</div>
@@ -137,7 +137,7 @@
     <div class="grid-item g-item14">14</div>
     <div class="grid-item g-item15">15</div>
     <div class="grid-item g-item16">16</div>
-  </div>
+  </div> -->
 
 
 
@@ -358,6 +358,43 @@
     </div>
   </div>
 
+
+
+
+  <div class="modal fade" id="css-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cascading Style Sheets (CSS3)</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <h2>Global Reset</h2>
+              <li>You should always do a global reset of a few important CSS properties that browsers handle differently</li>
+              <li>This is done using the * selector to select everything, also *::before and *::after selects all pseudos</li>
+              <li>The three main props to reset are margin, padding, and box-sizing</li>              
+            </ul>
+
+            <ul>
+              <h2>HTML and Body</h2>
+              <li>These two places are where you define styles you want to have a deep reaching effect</li>
+              <li>It's common to define the font size in the html tag to 62.5%</li>
+              <li>This may seem arbitrary, but 1rem = 16px, so setting that allows 1rem to = 10px</li>
+              <li>This is important because rems adjust properly when a user adjusts their font size</li>
+              <li>So your whole UI will adjust for them if you use rems, this doesn't happen with pixels</li>
+              <li>body is a good place to define things such as bg-color, text-color, font-family, or a main grid</li>
+              <li>These tags are often referred to as your base styles</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
