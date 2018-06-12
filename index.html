@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/png" href="img/notes.png" />
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-  crossorigin="anonymous">
+    crossorigin="anonymous">
   <link rel="stylesheet" media="screen" href="css/style.css" />
   <link rel="stylesheet" href="css/animate.css">
 
@@ -280,12 +280,12 @@
         <div class="modal-body">
           <h2>Grid Template Rows/Columns/Areas</h2>
           <ul>
-            <li>The rows property is used to provide the height is each grid row  :: grid-template-rows: repeat(2, 150px);</li>
-            <li>The columns property is used to provide the width of each column ::   grid-template-columns: repeat(3, 1fr);</li>
+            <li>The rows property is used to provide the height is each grid row :: grid-template-rows: repeat(2, 150px);</li>
+            <li>The columns property is used to provide the width of each column :: grid-template-columns: repeat(3, 1fr);</li>
             <li>Areas is for naming sections declated grid :: grid-template-areas: "green brown blue" "violet orange pink";</li>
             <li>The above would name the 3 grid cells on row 1, then name the 3 on row 2</li>
           </ul>
-          
+
           <h2>FR</h2>
           <ul>
             <li>fr stands for fractional unit, and it can be used to divide up the entirety of the available grid area</li>
@@ -307,7 +307,7 @@
           <ul>
             <li>auto-fill can be used to fill out remaining grid space if needed creating new rows/columns implicitly</li>
             <li>auto-fit will instead collapse implicitly created grid spaces if they are empty</li>
-            <li>ex. :: grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))  if used in a 1000px wide container</li>
+            <li>ex. :: grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) if used in a 1000px wide container</li>
             <li>elements would fill the entire space, being 1fr max width, and 100px min width</li>
           </ul>
 
@@ -362,57 +362,57 @@
 
 
   <div class="modal fade" id="css-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Cascading Style Sheets (CSS3)</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <ul>
-              <h2>Global Reset</h2>
-              <li>You should always do a global reset of a few important CSS properties that browsers handle differently</li>
-              <li>This is done using the * selector to select everything, also *::before and *::after selects all pseudos</li>
-              <li>The three main props to reset are margin, padding, and box-sizing</li>              
-            </ul>
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cascading Style Sheets (CSS3)</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <h2>Global Reset</h2>
+            <li>You should always do a global reset of a few important CSS properties that browsers handle differently</li>
+            <li>This is done using the * selector to select everything, also *::before and *::after selects all pseudos</li>
+            <li>The three main props to reset are margin, padding, and box-sizing</li>
+          </ul>
 
-            <ul>
-              <h2>HTML and Body</h2>
-              <li>These two places are where you define styles you want to have a deep reaching effect</li>
-              <li>It's common to define the font size in the html tag to 62.5%</li>
-              <li>This may seem arbitrary, but 1rem = 16px, so setting that allows 1rem to = 10px</li>
-              <li>This is important because rems adjust properly when a user adjusts their font size</li>
-              <li>So your whole UI will adjust for them if you use rems, this doesn't happen with pixels</li>
-              <li>body is a good place to define things such as bg-color, text-color, font-family, or a main grid</li>
-              <li>These tags are often referred to as your base styles</li>
-            </ul>
+          <ul>
+            <h2>HTML and Body</h2>
+            <li>These two places are where you define styles you want to have a deep reaching effect</li>
+            <li>It's common to define the font size in the html tag to 62.5%</li>
+            <li>This may seem arbitrary, but 1rem = 16px, so setting that allows 1rem to = 10px</li>
+            <li>This is important because rems adjust properly when a user adjusts their font size</li>
+            <li>So your whole UI will adjust for them if you use rems, this doesn't happen with pixels</li>
+            <li>body is a good place to define things such as bg-color, text-color, font-family, or a main grid</li>
+            <li>These tags are often referred to as your base styles</li>
+          </ul>
 
-            <ul>
-              <h2>Positioning</h2>
-              <li>You can position items using a handful of different properties</li>
-              <li>Setting position to relative on a parent element allows a child element to be positioned absolutely</li>
-              <li>Doing this allows you to set top, left, right, bottom to define its position within the parent</li>
-              <li>ex: set position: relative on the parent and position: absolute on the child to accomplish this</li>
-              <li>With flexbox and CSS Grid this type of positioning is slowly fading away due to ease of use</li>
-            </ul>
+          <ul>
+            <h2>Positioning</h2>
+            <li>You can position items using a handful of different properties</li>
+            <li>Setting position to relative on a parent element allows a child element to be positioned absolutely</li>
+            <li>Doing this allows you to set top, left, right, bottom to define its position within the parent</li>
+            <li>ex: set position: relative on the parent and position: absolute on the child to accomplish this</li>
+            <li>With flexbox and CSS Grid this type of positioning is slowly fading away due to ease of use</li>
+          </ul>
 
-            <ul>
-              <h2>Bootstrap</h2>
-              <li>Bootstrap is a CSS library that has pre-defined styles you can choose from</li>
-              <li>You apply the styles by placing classes with specific names on your HTML elements</li>
-              <li>Bootstrap is most useful for small things where you don't want to re-create the wheel, like modals</li>
-              <li>You can download pre-build bootstrap templates to use for a layout</li>
-              <li>If you need to edit those templates however, you need to understand CSS</li>
-            </ul>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
+          <ul>
+            <h2>Bootstrap</h2>
+            <li>Bootstrap is a CSS library that has pre-defined styles you can choose from</li>
+            <li>You apply the styles by placing classes with specific names on your HTML elements</li>
+            <li>Bootstrap is most useful for small things where you don't want to re-create the wheel, like modals</li>
+            <li>You can download pre-build bootstrap templates to use for a layout</li>
+            <li>If you need to edit those templates however, you need to understand CSS</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
 
 
